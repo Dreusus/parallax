@@ -19,10 +19,10 @@ header {
 }
 header h1 {
     font-size: 40px;
+    color: white;
 
 }
 header nav {
-
     display: flex;
     gap: 30px;
 }
@@ -33,6 +33,7 @@ header nav a {
     padding: 8px 16px;
     border-radius: 99px;
     transition: 0.3s;
+    color: white;
 
 }
 header nav a.active {
@@ -43,4 +44,19 @@ header nav a:hover {
 }
 header nav:hover > a:not(:hover) {
     background: none;
+}
+
+.home {
+    display: flex;
+    height: 100dvh;
+    background: linear-gradient(to top, #D2E2FB 30%, #86A8DB);
+    position: relative;
+    overflow: hidden;
+}
+
+.home img {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    pointer-events: none;
 }
