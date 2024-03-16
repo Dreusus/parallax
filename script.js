@@ -17,3 +17,18 @@ document.addEventListener('scroll', function() {
     mount1.style.marginBottom = -value * 1.1 + 'px'
     mount2.style.marginBottom = -value * 1.2 + 'px'
 })
+
+document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll('header nav a').forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const href = this.getAttribute('href');
+            const offsetTop = document.querySelector(href).offsetTop;
+
+            scroll({
+                top: offsetTop,
+                behavior: "smooth"
+            });
+        });
+    });
+});

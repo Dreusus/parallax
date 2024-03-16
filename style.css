@@ -73,24 +73,41 @@ header nav:hover > a:not(:hover) {
 .about h1, .services h1, .experience h2, .skills h2, .contact h2 {
     font-size: 40px;
     color: white;
-    margin-bottom: 20px; /* Добавлен отступ снизу для заголовков */
+    margin-bottom: 20px;
 }
 
 .about, .services, .experience, .skills, .contact {
     padding: 50px;
-    background: #3B3291; /* Унифицирован фон для всех секций */
+    background: #3B3291;
     color: white;
     position: relative;
     z-index: 100;
 }
 
 .services ul, .skills ul, .contact ul {
-    list-style: none; /* Убраны маркеры списка */
+    list-style: none;
     padding: 0;
 }
 
 .services li::before, .skills li::before, .contact li::before {
     content: '✓';
     margin-right: 8px;
-    color: #76B947; /* Добавлен стиль для элементов списка */
+    color: #76B947;
+}
+.skills ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.skills li {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.skills li::before {
+    content: '•';
+    color: #76B947;
+    position: absolute;
+    left: 0;
 }
