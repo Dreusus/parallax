@@ -6,6 +6,13 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+body {
+    scroll-behavior: smooth;
+}
+
+#logo-tester {
+    cursor: pointer;
+}
 
 header {
     display: flex;
@@ -111,3 +118,11 @@ header nav:hover > a:not(:hover) {
     position: absolute;
     left: 0;
 }
+#backToTopButton {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    cursor: pointer;
+    z-index: 1000;
+}
+

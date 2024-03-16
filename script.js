@@ -19,16 +19,13 @@ document.addEventListener('scroll', function() {
 })
 
 document.addEventListener("DOMContentLoaded", () => {
-    document.querySelectorAll('header nav a').forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            const href = this.getAttribute('href');
-            const offsetTop = document.querySelector(href).offsetTop;
+    const backToTopButton = document.getElementById('backToTopButton');
 
-            scroll({
-                top: offsetTop,
-                behavior: "smooth"
-            });
-        });
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 100) {
+            backToTopButton.style.display = 'block';
+        } else {
+            backToTopButton.style.display = 'none';
+        }
     });
 });
