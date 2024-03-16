@@ -7,6 +7,10 @@
     font-family: 'Poppins', sans-serif;
 }
 
+#logo-tester {
+    cursor: pointer;
+}
+
 header {
     display: flex;
     justify-content: space-between;
@@ -44,9 +48,10 @@ header nav:hover > a:not(:hover) {
     background: none;
 }
 
+
 .home {
     display: flex;
-    height: 100dvh;
+    height: 100vh; /* Исправлено с 100dvh на 100vh */
     background: linear-gradient(to top, #D2E2FB 30%, #86A8DB);
     position: relative;
     overflow: hidden;
@@ -69,13 +74,52 @@ header nav:hover > a:not(:hover) {
     text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
 }
 
-.about {
+.about h1, .services h1, .experience h2, .skills h2, .contact h2 {
+    font-size: 40px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.about, .services, .experience, .skills, .contact {
     padding: 50px;
     background: #3B3291;
     color: white;
     position: relative;
     z-index: 100;
 }
-.about h1 {
-    font-size: 40px;
+
+.services ul, .skills ul, .contact ul {
+    list-style: none;
+    padding: 0;
 }
+
+.services li::before, .skills li::before, .contact li::before {
+    content: '✓';
+    margin-right: 8px;
+    color: #76B947;
+}
+.skills ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.skills li {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.skills li::before {
+    content: '•';
+    color: #76B947;
+    position: absolute;
+    left: 0;
+}
+#backToTopButton {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
